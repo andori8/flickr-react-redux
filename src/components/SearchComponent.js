@@ -5,6 +5,18 @@ class SearchComponent extends Component {
     text: ''
   }
 
+  handleChange = e => {
+    this.setState({
+      text: e.target.value
+    })
+  }
+
+  handleSubmit = e => {
+    e.preventDefault()
+    this.props.fetchPhoto(this.state.text)
+    this.setState({text: ''})
+  }
+
   render() {
     return (
       <div className="search-field">
