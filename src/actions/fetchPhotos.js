@@ -23,9 +23,8 @@ export function fetchSearchedPhotos(q) {
 export function fetchClickedPhoto(id) {
   return (dispatch) => {
     dispatch({ type: 'LOADING_CLICKED_PHOTO' });
-    return fetch(`http://localhost:3001/api/v1/recent/${id}`, {
+    return fetch(`http://localhost:3001/api/v1/recent/${id}`)
       .then(res => res.json())
-      .then(photos => ({ type: 'FETCH_CLICKED_PHOTO', payload: photos.photos.photo }))
-    })
+      .then(photo => ({ type: 'FETCH_CLICKED_PHOTO', payload: photo.photo }))
   }
 }

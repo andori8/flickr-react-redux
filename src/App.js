@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Search from './containers/Search';
 import RecentPhotos from './containers/RecentPhotos';
 import NavBar from './components/NavBar';
+import ShowPhoto from './containers/ShowPhoto';
 import './App.css';
 
 class App extends Component {
@@ -14,6 +15,7 @@ class App extends Component {
           <NavBar />
           <Route exact path="/search" component={Search} />
           <Route exact path="/recent" component={RecentPhotos} />
+          <Route exact path="/recent/:id" component={ShowPhoto} />
         </div>
       </Router>
     );
