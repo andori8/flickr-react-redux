@@ -1,22 +1,19 @@
 import React, { Component } from 'react';
 import Photos from '../components/Photos';
+import { connect } from 'react-redux';
+import { fetchPhotos } from '../actions/fetchPhotos';
 
 class RecentPhotos extends Component {
-  state = {
-    recentPhotos: []
-  }
 
   componentDidMount() {
-    fetch(`http://localhost:3001/api/v1/recent`)
-    .then(res => res.json())
-    .then(json => {this.setState({recentPhotos: json.photos.photo.map(photo => photo)})})
+    this.props.fetchPhotos()
   }
 
   render() {
     return (
-      <div><Photos photos={this.state.recentPhotos} /></div>
+      <div><Photos photos={this.props.recentPhotos} /></div>
     )
   }
 }
 
-export default RecentPhotos;
+export default connect(state => ({recentPhotos: state.recentPhotos}), {fetchPhotos})(RecentPhotos);
