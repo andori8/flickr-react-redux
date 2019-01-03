@@ -1,5 +1,5 @@
 export default function rootReducer(state = {
-  photos: [], recentPhotos: [], loading: false
+  photos: [], recentPhotos: [], clickedPhoto: {}, loading: false
 }, action) {
   switch (action.type) {
     case 'LOADING_PHOTOS':
@@ -10,6 +10,10 @@ export default function rootReducer(state = {
       return {...state, loading: true}
     case 'FETCH_SEARCHED_PHOTOS':
       return {...state, loading: false, photos: action.payload}
+    case 'LOADING_CLICKED_PHOTO':
+      return {...state, loading: true}
+    case 'FETCH_CLICKED_PHOTO':
+      return {...state, loading: false, clickedPhoto: action.payload}
     default:
       return state;
   }

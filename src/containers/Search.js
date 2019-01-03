@@ -15,8 +15,4 @@ class Search extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return { fetchSearchedPhotos: q => dispatch(fetchSearchedPhotos(q))}
-}
-
-export default connect(state => ({photos: state.photos}), mapDispatchToProps)(Search);
+export default connect(state => ({photos: state.photos}), {fetchSearchedPhotos})(Search);
