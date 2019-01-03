@@ -13,7 +13,7 @@ class SearchBar extends Component {
 
   handleSubmit = e => {
     e.preventDefault()
-    this.props.fetchPhoto({query: this.state.text})
+    this.props.fetchPhoto(this.state.text)
     this.setState({text: ''})
   }
 
