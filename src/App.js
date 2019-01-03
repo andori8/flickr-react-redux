@@ -6,18 +6,15 @@ import NavBar from './components/NavBar';
 import './App.css';
 
 class App extends Component {
-  state = {
-    photos: []
-  }
 
   render() {
     return (
       <Router>
-      <div className="App">
-      <NavBar />
-      <Router exact path="/search" component={Search} />
-      <Router exact path="/recent" component={RecentPhotos} />
-      </div>
+        <div className="App">
+          <NavBar />
+          <Route exact path="/search" component={Search} />
+          <Route exact path="/recent" component={RecentPhotos} />
+        </div>
       </Router>
     );
   }

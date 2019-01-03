@@ -7,7 +7,7 @@ class RecentPhotos extends Component {
   }
 
   componentDidMount() {
-    fetch(`https://api.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=${process.env.REACT_APP_API_KEY}&format=json&nojsoncallback=1&extras=url_m`)
+    fetch(`http://localhost:3001/api/v1/recent`)
     .then(res => res.json())
     .then(json => {this.setState({recentPhotos: json.photos.photo.map(photo => photo)})})
   }
