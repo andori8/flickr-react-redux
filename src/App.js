@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import SearchComponent from './components/SearchComponent';
-import PhotosContainer from './containers/PhotosContainer';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Search from './containers/Search';
+import RecentPhotos from './containers/RecentPhotos';
+import NavBar from './components/NavBar';
 import './App.css';
 
 class App extends Component {
@@ -8,18 +10,15 @@ class App extends Component {
     photos: []
   }
 
-  fetchPhoto = q => {
-    fetch(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${process.env.REACT_APP_API_KEY}&text=${q}&format=json&nojsoncallback=1&extras=url_m`)
-    .then(res => res.json())
-    .then(json => {this.setState({photos: json.photos.photo.map(photo => photo)})})
-  }
-
   render() {
     return (
+      <Router>
       <div className="App">
-      <SearchComponent fetchPhoto={this.fetchPhoto} />
-      <PhotosContainer photos={this.state.photos} />
+      <NavBar />
+      <Router exact path="/search" component={Search} />
+      <Router exact path="/recent" component={RecentPhotos} />
       </div>
+      </Router>
     );
   }
 }
