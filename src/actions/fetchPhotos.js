@@ -25,7 +25,6 @@ export function fetchClickedPhoto(id) {
     dispatch({ type: 'LOADING_CLICKED_PHOTO' });
     return fetch(`http://localhost:3001/api/v1/recent/${id}`)
       .then(res => res.json())
-      // .then(photo => {debugger})
       .then(photo => dispatch({ type: 'FETCH_CLICKED_PHOTO', payload: photo }))
   }
 }
