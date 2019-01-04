@@ -8,9 +8,15 @@ class ShowPhoto extends Component {
   }
 
   render() {
+    if (Object.keys(this.props.clickedPhoto).length !== 0) {
+      console.log(this.props.clickedPhoto)
     return (
-      <div><img src={this.props.clickedPhoto} /></div>
-    )
+      <div>
+      <img src={this.props.clickedPhoto.urls.url[0]._content} />
+      </div>
+    ) } else {
+      return <div>loading</div>
+    }
   }
 }
 
