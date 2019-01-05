@@ -3,7 +3,7 @@ import {Navbar, NavbarBrand, Nav, NavItem, NavLink} from 'reactstrap';
 
 const NavBar = () => {
   return (
-    <div>
+    <div className="nav-bar">
         <Navbar color="light" light expand="md">
           <NavbarBrand href="/">Flickstr</NavbarBrand>
             <Nav className="ml-auto" navbar>

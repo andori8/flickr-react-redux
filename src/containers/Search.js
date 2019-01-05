@@ -15,4 +15,4 @@ class Search extends Component {
   }
 }
 
-export default connect(state => ({photos: state.photos}), {fetchSearchedPhotos})(Search);
+export default connect(state => ({photos: state.photos.photos}), {fetchSearchedPhotos})(Search);

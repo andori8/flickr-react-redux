@@ -23,4 +23,4 @@ class ShowPhoto extends Component {
   }
 }
 
-export default connect(state => ({clickedPhoto: state.clickedPhoto}), {fetchClickedPhoto})(ShowPhoto);
+export default connect(state => ({clickedPhoto: state.clickedPhoto.clickedPhoto}), {fetchClickedPhoto})(ShowPhoto);

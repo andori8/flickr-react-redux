@@ -16,4 +16,4 @@ class RecentPhotos extends Component {
   }
 }
 
-export default connect(state => ({recentPhotos: state.recentPhotos}), {fetchPhotos})(RecentPhotos);
+export default connect(state => ({recentPhotos: state.recentPhotos.recentPhotos}), {fetchPhotos})(RecentPhotos);
