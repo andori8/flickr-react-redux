@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Loading from 'react-loading-animation';
 import { connect } from 'react-redux';
 import { fetchClickedPhoto } from '../actions/fetchPhotos';
 
@@ -18,7 +19,7 @@ class ShowPhoto extends Component {
       <p><a href={clickedPhoto.photo.urls.url[0]._content}>Go to Flickr page</a></p>
       </div>
     ) } else {
-      return <div>loading</div>
+      return <div><Loading /></div>
     }
   }
 }

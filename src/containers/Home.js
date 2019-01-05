@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import Welcome from './Welcome';
+import Welcome from '../components/Welcome';
 import { connect } from 'react-redux';
 import {fetchSearchedPhotos} from '../actions/fetchPhotos';
 

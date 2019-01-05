@@ -30,9 +30,12 @@ class Welcome extends Component {
       <div>
         <h1 id="welcome_message">Welcome to Flickstr!</h1><br />
         <form onSubmit={this.handleSubmit}>
-          <input type="text" onChange={this.handleChange} value={this.state.text} placeholder="Search a photo!" /><br /><br />
+          <input type="text" className="search-field" onChange={this.handleChange} value={this.state.text} placeholder="Search a photo!" /><br /><br />
           <input type="submit" className="submit-button" value="Search" />
         </form>
+        <div className="container">
+          <img src={Image} />
+        </div>
         {this.renderRedirect()}
       </div>
   )

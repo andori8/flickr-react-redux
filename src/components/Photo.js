@@ -19,10 +19,11 @@ class Photo extends Component {
   }
 
   render() {
+    const {photo} = this.props
     return (
       <div className="single-photo">
-        {this.proceedRedirect(this.props.photo.id)}
-        <img src = {this.props.photo.url_m} onClick={this.handleClick} />
+        {this.proceedRedirect(photo.id)}
+        <img src = {photo.url_m} onClick={this.handleClick} />
       </div>
     )
   }

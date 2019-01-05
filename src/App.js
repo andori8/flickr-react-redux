@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Search from './containers/Search';
 import RecentPhotos from './containers/RecentPhotos';
 import NavBar from './components/NavBar';
-import Home from './components/Home';
+import Home from './containers/Home';
 import ShowPhoto from './containers/ShowPhoto';
 import './App.css';
 
