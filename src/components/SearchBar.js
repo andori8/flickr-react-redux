@@ -21,7 +21,7 @@ class SearchBar extends Component {
     return (
       <div className="search-field">
         <form onSubmit={this.handleSubmit}>
-          <input type="text" onChange={this.handleChange} value={this.state.text} placeholder="Search for flickr photos!" />
+          <input type="text" onChange={this.handleChange} value={this.state.text} placeholder="Search for flickr photos!" /><br /><br />
           <input type="submit" id="submit-button" value="Search" />
         </form>
       </div>
