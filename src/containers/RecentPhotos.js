@@ -10,8 +10,9 @@ class RecentPhotos extends Component {
   }
 
   render() {
+    const {recentPhotos} = this.props
     return (
-      <div><Photos photos={this.props.recentPhotos} /></div>
+      <div><Photos photos={recentPhotos} /></div>
     )
   }
 }

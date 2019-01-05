@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
+import Welcome from './Welcome';
+import { connect } from 'react-redux';
+import {fetchSearchedPhotos} from '../actions/fetchPhotos';
 
 class Home extends Component {
   state = {
@@ -23,10 +26,10 @@ class Home extends Component {
     return (
       <div className="home" >
         {this.renderRedirect()}
-        <button id="search" onClick={this.handleClick}>Search</button>
+        <Welcome fetchPhotos={this.props.fetchSearchedPhotos}/>
       </div>
     )
   }
 }
 
-export default Home;
+export default connect(null, {fetchSearchedPhotos})(Home);
