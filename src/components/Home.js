@@ -21,7 +21,7 @@ class Home extends Component {
   }
   render() {
     return (
-      <div className="home">
+      <div className="home" >
         {this.renderRedirect()}
         <button id="search" onClick={this.handleClick}>Search</button>
         <button id="recent" onClick={this.handleClick}>Most Recent</button>

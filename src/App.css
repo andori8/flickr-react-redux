@@ -14,3 +14,22 @@
   height: 20em;
   width: 100%;
 }
+
+.navbar {
+  margin-bottom: 3em;
+  background-color: black;
+}
+
+#logo {
+  color: #00ffff;
+  font-style: italic;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #66ff33;
+}
+
+body {
+  background-image: url('./stylesheets/cool-background.png');
+  background-size: cover;
+}
