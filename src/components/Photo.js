@@ -23,7 +23,7 @@ class Photo extends Component {
     return (
       <div className="single-photo">
         {this.proceedRedirect(photo.id)}
-        <img src = {photo.url_m} onClick={this.handleClick} />
+        <img src = {photo.url_m} alt="" onClick={this.handleClick} />
       </div>
     )
   }

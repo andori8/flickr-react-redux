@@ -7,7 +7,6 @@ import thunk from 'redux-thunk';
 import rootReducer from './reducers/rootReducer';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Image from './stylesheets/cool-background.png';
 
 const store = createStore(rootReducer, compose(
   applyMiddleware(thunk),

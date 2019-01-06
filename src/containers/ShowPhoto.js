@@ -14,7 +14,7 @@ class ShowPhoto extends Component {
       const source_url = `https://farm${clickedPhoto.photo.farm}.staticflickr.com/${clickedPhoto.photo.server}/${clickedPhoto.photo.id}_${clickedPhoto.photo.secret}.jpg`
     return (
       <div>
-      <img src= {source_url} />
+      <img src= {source_url} alt="" />
       <h4>"{clickedPhoto.photo.title._content}"</h4>
       <p><a href={clickedPhoto.photo.urls.url[0]._content}>Go to Flickr page</a></p>
       </div>

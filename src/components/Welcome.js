@@ -33,9 +33,6 @@ class Welcome extends Component {
           <input type="text" className="search-field" onChange={this.handleChange} value={this.state.text} placeholder="Search a photo!" /><br /><br />
           <input type="submit" className="submit-button" value="Search" />
         </form>
-        <div className="container">
-          <img src={Image} />
-        </div>
         {this.renderRedirect()}
       </div>
   )
