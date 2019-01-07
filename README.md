@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# Flickstr App &#9730;
+# Flickstr App
 This is an app that receives input from user and displays photos from flickr based on the input.
 Alternatively, the user can take a look at the most recently uploaded photos from flickr.
 
