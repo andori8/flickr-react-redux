@@ -10,7 +10,6 @@ import * as serviceWorker from './serviceWorker';
 
 const store = createStore(rootReducer, compose(
   applyMiddleware(thunk))
-  )
 );
 
 ReactDOM.render(
