@@ -1,4 +1,4 @@
-export default (state = {clickedPhoto: {}}, action) => {
+export default (state = {clickedPhoto: []}, action) => {
   switch (action.type) {
     case 'LOADING_CLICKED_PHOTO':
       return {...state, loading: true}

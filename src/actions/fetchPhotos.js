@@ -27,6 +27,6 @@ export function fetchClickedPhoto(id) {
     dispatch({ type: 'LOADING_CLICKED_PHOTO' });
     return fetch(`https://flickstr-react-redux.herokuapp.com/api/v1/recent/${id}`)
       .then(res => res.json())
-      .then(photo => dispatch({ type: 'FETCH_CLICKED_PHOTO', payload: photo }))
+      .then(photo => dispatch({ type: 'FETCH_CLICKED_PHOTO', payload: photo.photo }))
   }
 }

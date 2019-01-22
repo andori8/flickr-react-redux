@@ -11,12 +11,12 @@ class ShowPhoto extends Component {
   render() {
     const {clickedPhoto} = this.props
     if (Object.keys(clickedPhoto).length !== 0) {
-      const source_url = `https://farm${clickedPhoto.photo.farm}.staticflickr.com/${clickedPhoto.photo.server}/${clickedPhoto.photo.id}_${clickedPhoto.photo.secret}.jpg`
+      const source_url = `https://farm${clickedPhoto.farm}.staticflickr.com/${clickedPhoto.server}/${clickedPhoto.id}_${clickedPhoto.secret}.jpg`
     return (
       <div>
       <img src= {source_url} alt="" />
-      <h4>"{clickedPhoto.photo.title._content}"</h4>
-      <p><a href={clickedPhoto.photo.urls.url[0]._content}>Go to Flickr page</a></p>
+      <h4>"{clickedPhoto.title._content}"</h4>
+      <p><a href={clickedPhoto.urls.url[0]._content}>Go to Flickr page</a></p>
       </div>
     ) } else {
       return <div><Loading /></div>
