@@ -1,25 +1,28 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import {Navbar, Nav, NavItem} from 'react-bootstrap';
 
-const NavBar = () => {
+class NavBar extends Component {
+  render() {
   return (
     <div className="navbar">
     <Navbar fixedTop>
       <Navbar.Header>
         <Navbar.Brand>
-          <a id="logo" href="/">Flickstr</a>
+          <Link to="/" id="logo">Flickstr</Link>
         </Navbar.Brand>
         <Navbar.Toggle />
       </Navbar.Header>
       <Navbar.Collapse>
       <Nav pullRight>
-        <NavItem className="menu-item" href="/search">Search</NavItem>
-        <NavItem className="menu-item" href="/recent">Recent Uploads</NavItem>
+        <NavItem><Link to="/search" className="menu-item">Search</Link></NavItem>
+        <NavItem><Link to="/recent" className="menu-item">Recent Uploads</Link></NavItem>
       </Nav>
       </Navbar.Collapse>
     </Navbar>
     </div>
   )
+  }
 }
 
 export default NavBar;

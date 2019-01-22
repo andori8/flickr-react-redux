@@ -28,10 +28,6 @@
   font-style: italic;
 }
 
-.navbar-default .navbar-nav > li > a {
-  color: #66ff33;
-}
-
 body {
   background: url('./stylesheets/cool-background.png') no-repeat fixed;
     -webkit-background-size: cover;
