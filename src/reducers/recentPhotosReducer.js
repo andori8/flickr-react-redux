@@ -1,4 +1,4 @@
-export default (state = {recentPhotos: []}, action) => {
+export default (state = {recentPhotos: [], loading: false}, action) => {
   switch (action.type) {
     case 'LOADING_PHOTOS':
       return {...state, loading: true}

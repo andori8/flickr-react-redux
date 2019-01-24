@@ -22,8 +22,8 @@ class Photo extends Component {
     const {photo} = this.props
     return (
       <div className="single-photo">
-        {this.proceedRedirect(photo.photo_id)}
-        <img src = {photo.url} alt="" onClick={this.handleClick} />
+        {this.proceedRedirect(photo.photo_id === undefined ? photo.id : photo.photo_id)}
+        <img src = {photo.url === undefined ? photo.url_m : photo.url} alt="" onClick={this.handleClick} />
       </div>
     )
   }

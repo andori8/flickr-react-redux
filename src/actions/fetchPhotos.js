@@ -11,13 +11,13 @@ export function fetchSearchedPhotos(q) {
   return (dispatch) => {
     dispatch({ type: 'LOADING_SEARCHED_PHOTOS' });
     if (q.length !== 0) {
-    return fetch(`https://flickstr-react-redux.herokuapp.com/api/v1/search`, {
+    return fetch(`http://localhost:3001/api/v1/search`, {
       method: 'POST',
       headers: {"content-type": "application/json"},
       body: JSON.stringify({query: q})
     })
     .then(res => res.json())
-    .then(photos => dispatch( {type: 'FETCH_SEARCHED_PHOTOS', payload: photos.photos.photo}))
+    .then(photos => dispatch( {type: 'FETCH_SEARCHED_PHOTOS', payload: photos}))
   }
   }
 }

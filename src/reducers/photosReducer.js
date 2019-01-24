@@ -1,4 +1,4 @@
-export default (state = {photos: []}, action) => {
+export default (state = {photos: [], loading: false}, action) => {
   switch (action.type) {
     case 'LOADING_SEARCHED_PHOTOS':
       return {...state, loading: true}
